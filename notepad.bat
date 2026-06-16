@@ -36,7 +36,7 @@ goto :menu
     cls
     echo Please choose your file (from the Desktop folder):
     set /p filename=
-    for /f %%i in (%USERPROFILE%\Desktop\%filename%) do @echo %%i &:: from stack overflow, so shout out to them
+    type %USERPROFILE%\Desktop\%filename% &:: suggested by u/Shadow_Thief
     pause
     cls
     goto :menu
