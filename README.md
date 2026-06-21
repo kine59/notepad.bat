@@ -1,5 +1,5 @@
 # Notepad, by Kine59
-This is a simple notepad app made in the batch programming language. It is quite limited though as it only saves and opens files from the desktop.
+This is a simple notepad app made in the batch programming language. It is quite limited though as it only saves (overwriting and appending) and opens files from the desktop.
 If you have any issues or suggestions, please make a new issue on the issues page. If you want to contribute to this project, you can make a PR. (pull request)
 # License
 This script uses the unlicense license. TLDR: Do whatever you want with it.
