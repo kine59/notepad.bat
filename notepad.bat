@@ -4,6 +4,7 @@
 @echo off
 cls
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\kine59_notepad" /v "Developer" 
+
 if %errorlevel% equ 0 (
     cls
     goto :devmenu
