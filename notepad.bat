@@ -24,6 +24,7 @@ if %errorlevel% equ 0 (
 
     if errorlevel 3 goto :exit
     if errorlevel 2 (
+        cd /d %cd%
         start notepad.bat
         exit
     )
