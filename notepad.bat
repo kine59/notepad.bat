@@ -3,6 +3,8 @@
 
 @echo off
 cls
+
+:: Registry checking for the developer value, regardless of type or value
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\kine59_notepad" /v "Developer" 
 
 if %errorlevel% equ 0 (
@@ -13,6 +15,15 @@ if %errorlevel% equ 0 (
     goto :menu
 )
 
+:: Check for the kine59_notepad folder/directory
+if exist "%USERPROFILE%\Documents\kine59_notepad\" (
+    echo kine59_notepad directory exists!
+) else (
+    mkdir %USERPROFILE%\Documents\kine59_notepad\
+    echo Created kine59_notepad directory
+)
+
+:: Dev Menu
 :devmenu
     color 02
     echo +-- Developer Menu
@@ -73,7 +84,7 @@ if %errorlevel% equ 0 (
     cls
     echo File Name (please include the file type at the end):
     set /p filename=
-    echo %text% > %USERPROFILE%\Desktop\%filename%
+    echo %text% > %USERPROFILE%\Documents\kine59_notepad\%filename%
     cls
     goto :menu
 
@@ -81,16 +92,16 @@ if %errorlevel% equ 0 (
     cls
     echo File Name (please include the file type at the end):
     set /p filename=
-    echo %text% >> %USERPROFILE%\Desktop\%filename% &:: >> appends text
+    echo %text% >> %USERPROFILE%\Documents\kine59_notepad\%filename% &:: >> appends text
     cls
     goto :menu
 
 :open
     cls
-    echo Please choose your file (from the Desktop folder):
+    echo Please choose your file (from the kine59_notepad folder located in Documents):
     set /p filename=
     cls
-    type %USERPROFILE%\Desktop\%filename% &:: suggested by u/Shadow_Thief
+    type %USERPROFILE%\Documents\kine59_notepad\%filename% &:: suggested by u/Shadow_Thief
     echo:
     echo:
     echo Do you want to ^edit this file?
