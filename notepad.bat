@@ -4,6 +4,14 @@
 @echo off
 cls
 
+:: Check for the kine59_notepad folder/directory
+if exist "%USERPROFILE%\Documents\kine59_notepad\" (
+    echo kine59_notepad directory exists!
+) else (
+    mkdir %USERPROFILE%\Documents\kine59_notepad\
+    echo Created kine59_notepad directory
+)
+
 :: Registry checking for the developer value, regardless of type or value
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\kine59_notepad" /v "Developer" 
 
@@ -13,14 +21,6 @@ if %errorlevel% equ 0 (
 ) else (
     cls
     goto :menu
-)
-
-:: Check for the kine59_notepad folder/directory
-if exist "%USERPROFILE%\Documents\kine59_notepad\" (
-    echo kine59_notepad directory exists!
-) else (
-    mkdir %USERPROFILE%\Documents\kine59_notepad\
-    echo Created kine59_notepad directory
 )
 
 :: Dev Menu
