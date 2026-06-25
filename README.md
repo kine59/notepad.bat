@@ -1,6 +1,19 @@
 # Notepad, by Kine59
 This is a simple notepad app made in the batch programming language. It is quite limited though as it only saves (overwriting and appending) and opens files from the kine59_notepad folder (located within Documents).
 If you have any issues or suggestions, please make a new issue on the issues page. If you want to contribute to this project, you can make a PR. (pull request)
+# Compatibility
+OS | Compatible?
+--- | ---
+Windows 11 | Yes
+Windows 10 | Yes (BUT further testing has to be done)
+Windows 8 and 8.1 | Has yet to be tested
+Windows 7 | Has yet to be tested
+Windows Vista | Has yet to be tested
+Windows XP | No
+Older Windows Version | Definitely no
+Mac | No, but you can use [Parallels](https://www.parallels.com/products/desktop/).
+Linux | No, but you can use [Wine](https://www.winehq.org/) or convert it into a bash script.
+
 # License
 This script uses the unlicense license. TLDR: Do whatever you want with it.
 > This is free and unencumbered software released into the public domain.
