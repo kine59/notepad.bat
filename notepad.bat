@@ -99,6 +99,7 @@ if %errorlevel% equ 0 (
 :open
     cls
     echo Please choose your file (from the kine59_notepad folder located in Documents):
+    dir /b /a-d %USERPROFILE%\Documents\kine59_notepad
     set /p filename=
     cls
     type %USERPROFILE%\Documents\kine59_notepad\%filename% &:: suggested by u/Shadow_Thief
